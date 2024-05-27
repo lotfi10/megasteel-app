@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>delta.dev.software</groupId>
-	<artifactId>springboot-megasteel-thymleaf-codecanyon</artifactId>
+	<artifactId>springboot-megasteel-app</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>springboot-megasteel-thymleaf-codecanyon</name>
+	<name>springboot-megasteel-app</name>
 	<description>The backend for all applications.</description>
 	<properties>
 		<java.version>8</java.version>
