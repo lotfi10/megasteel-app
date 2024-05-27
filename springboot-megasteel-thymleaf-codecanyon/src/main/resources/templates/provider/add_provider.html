@@ -1,0 +1,73 @@
+<div th:fragment="add_provider_form" id="mymodel"
+	class="modal-dialog modal-xl" role="document">
+
+	<div class="modal-content">
+		<div class="modal-header">
+			<h5 class="modal-title" id="exampleModalLabel">New</h5>
+		</div>
+		<div class="modal-body">
+			<form th:action="@{/addprovider}" method="post">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group" style="z-index: 999999;">
+							<label>Name</label> <input name="name" type="text"
+								class="form-control" id="exampleInputEmail1"
+								aria-describedby="emailHelp" placeholder="name">
+						</div>
+						<!-- /.form-group -->
+						<div class="form-group">
+							<label>Address</label> <input name="address" type="text"
+								class="form-control" id="exampleInputEmail1"
+								aria-describedby="emailHelp" placeholder="address">
+						</div>
+						<!-- /.form-group -->
+						<div class="form-group">
+							<label>Code</label> <input name="code" type="text"
+								class="form-control" id="exampleInputEmail1"
+								aria-describedby="emailHelp" placeholder="code">
+						</div>
+						<!-- /.form-group -->
+						<div class="form-group">
+							<label>Fax</label> <input name="fax" type="text"
+								class="form-control" id="exampleInputEmail1"
+								aria-describedby="emailHelp" placeholder="fax">
+						</div>
+						<!-- /.form-group -->
+					</div>
+					<!-- /.col -->
+					<div class="col-md-6">
+						<div class="form-group">
+							<label>VAT</label> <select name="vat" class="form-control">
+								<option th:value="${vat.id}" th:each="vat:${vats}"
+									th:text="${vat.name}"></option>
+							</select>
+						</div>
+						<!-- /.form-group -->
+						<div class="form-group">
+							<label>Phone</label> <input name="phone" type="text"
+								class="form-control" id="exampleInputEmail1"
+								aria-describedby="emailHelp" placeholder="phone">
+						</div>
+						<!-- /.form-group -->
+						<div class="form-group">
+							<label>Responsable</label> <input name="responsable" type="text"
+								class="form-control" id="exampleInputEmail1"
+								aria-describedby="emailHelp" placeholder="responsable">
+						</div>
+						<!-- /.form-group -->
+
+						<!-- /.form-group -->
+					</div>
+					<!-- /.col -->
+				</div>
+				<!-- /.row -->
+
+				<!-- /.row -->
+				<button type="submit" class="btn btn-primary">Create</button>
+			</form>
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+		</div>
+	</div>
+</div>

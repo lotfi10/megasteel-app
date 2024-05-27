@@ -1,0 +1,70 @@
+
+<div th:fragment="add_bank_transfer_form" class="modal-dialog modal-xl"
+	role="document">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h5 class="modal-title" id="exampleModalLabel">New</h5>
+		</div>
+		<div class="modal-body">
+			<form th:action="@{/addbanktransfer}" method="post">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group" style="z-index: 999999;">
+							<label>From</label> <select name="paymentFrom">
+								<option th:value="${b.id}" th:each="b:${bankAccounts}"
+									th:text="${b.accountName}"></option>
+
+							</select>
+						</div>
+						<!-- /.form-group -->
+						<div class="form-group">
+							<label>To</label> <select name="paymentTo">
+								<option th:value="${b.id}" th:each="b:${bankAccounts}"
+									th:text="${b.accountName}"></option>
+
+							</select>
+						</div>
+
+						<div class="form-group">
+							<label>Transfer Name</label> <input name="paymentName"
+								type="text" class="form-control" id="exampleInputEmail1"
+								aria-describedby="emailHelp" placeholder="Name" />
+						</div>
+
+
+						<!-- /.form-group -->
+					</div>
+					<!-- /.col -->
+					<!-- /.col -->
+
+					<div class="col-md-6">
+						<div class="form-group">
+							<label>Date</label> <input name="date" type="date"
+								class="form-control" id="exampleInputEmail1"
+								aria-describedby="emailHelp" placeholder="name">
+						</div>
+						<!-- /.form-group -->
+
+
+						<div class="form-group">
+							<label>Amount</label> <input name="amount" type="number"
+								class="form-control" id="exampleInputEmail1"
+								aria-describedby="emailHelp" placeholder="Amount" />
+						</div>
+						<!-- /.form-group -->
+
+
+
+						<!-- /.form-group -->
+					</div>
+					<!-- /.col -->
+				</div>
+				<!-- /.row -->
+				<button type="submit" class="btn btn-primary">Create</button>
+			</form>
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+		</div>
+	</div>
+</div>

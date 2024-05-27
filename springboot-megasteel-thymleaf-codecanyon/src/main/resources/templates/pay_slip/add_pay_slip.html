@@ -1,0 +1,66 @@
+<div th:fragment="add_pay_slip_form" id="mymodel"
+	class="modal-dialog modal-xl" role="document">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h5 class="modal-title" id="exampleModalLabel">New</h5>
+		</div>
+		<div class="modal-body">
+			<form th:action="@{/addpayslip}" method="post">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group" style="z-index: 999999;">
+							<label>Employee</label> <input name="employee" type="text"
+								class="form-control" id="exampleInputEmail1"
+								aria-describedby="emailHelp" placeholder="employee">
+						</div>
+						<!-- /.form-group -->
+						<div class="form-group">
+							<label>Worked Hours</label> <input name="workedHours"
+								type="number" class="form-control" id="exampleInputEmail1"
+								aria-describedby="emailHelp" placeholder="worked Hours">
+						</div>
+						<!-- /.form-group -->
+					</div>
+					<!-- /.col -->
+					<div class="col-md-6">
+						<div class="form-group">
+							<label>Leaves </label> <input name="leaves" type="text"
+								class="form-control" id="exampleInputEmail1"
+								aria-describedby="emailHelp" placeholder="leaves">
+						</div>
+						<!-- /.form-group -->
+						<div class="form-group">
+							<label>Attendance Days</label> <input name="attendanceBonus"
+								type="number" class="form-control" id="exampleInputEmail1"
+								aria-describedby="emailHelp" placeholder="Attendance Bonus">
+						</div>
+						<!-- /.form-group -->
+						<div class="form-group">
+							<label>Gross Salary</label> <input name="grossSalary"
+								type="number" class="form-control" id="exampleInputEmail1"
+								aria-describedby="emailHelp" placeholder="Gross Salary">
+
+
+						</div>
+						<!-- /.form-group -->
+						<div class="form-group">
+							<label>Delay Hours</label> <input name="delayHours" type="number"
+								class="form-control" id="exampleInputEmail1"
+								aria-describedby="emailHelp" placeholder="Delay Hours">
+
+						</div>
+						<!-- /.form-group -->
+					</div>
+					<!-- /.col -->
+				</div>
+				<!-- /.row -->
+
+				<!-- /.row -->
+				<button type="submit" class="btn btn-primary">Create</button>
+			</form>
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+		</div>
+	</div>
+</div>
