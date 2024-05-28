@@ -45,7 +45,7 @@ import com.dev.delta.data.UserDBService;
 import com.dev.delta.data.VATDBService;
 
 @SpringBootApplication
-public class SpringbootMegasteelThymleafCodecanyonApplication implements CommandLineRunner {
+public class SpringbootMegasteelApplication implements CommandLineRunner {
 
 	@Autowired
 	private ArticleDBService articleDBService;
@@ -165,7 +165,7 @@ public class SpringbootMegasteelThymleafCodecanyonApplication implements Command
 	private MessagingDBService messagingDBService;
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringbootMegasteelThymleafCodecanyonApplication.class, args);
+		SpringApplication.run(SpringbootMegasteelApplication.class, args);
 	}
 
 	/**
